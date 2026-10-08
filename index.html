@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///C:/Users/user/Desktop/CSS%20class3,html/class-7/gift.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Gift 🎂</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #12002f, #35005c, #001f3f);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        text-align: center;
+        position: relative;
+        z-index: 5;
+      }
+      h1 {
+        font-size: 55px;
+        color: #fff;
+        text-shadow:
+          0 0 10px #ff4fd8,
+          0 0 25px #ff4fd8,
+          0 0 50px #ff4fd8;
+        animation: glow 2s infinite alternate;
+      }
+      .name {
+        font-size: 38px;
+        margin: 15px;
+        color: #ffd700;
+        text-shadow: 0 0 20px #ffd700;
+      }
+      .cake {
+        font-size: 100px;
+        animation: bounce 1.5s infinite;
+        margin: 10px;
+      }
+      .gift {
+        width: 130px;
+        height: 100px;
+        background: #ff1744;
+        margin: 25px auto;
+        position: relative;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(255, 23, 68, 0.5);
+        transition: 0.4s;
+      }
+      .gift:hover {
+        transform: scale(1.1) rotate(3deg);
+      }
+      .gift::before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 100%;
+        background: #ffd700;
+        left: 52px;
+      }
+      .gift::after {
+        content: "🎀";
+        position: absolute;
+        font-size: 55px;
+        top: -48px;
+        left: 35px;
+      }
+      .button {
+        padding: 14px 30px;
+        border: none;
+        border-radius: 30px;
+        background: linear-gradient(45deg, #ff1493, #8a2be2);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 0 20px #ff1493;
+        transition: 0.3s;
+      }
+      .button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 35px #ff1493;
+      }
+      #message {
+        display: none;
+        margin: 25px auto;
+        max-width: 600px;
+        font-size: 21px;
+        line-height: 1.6;
+        animation: appear 1s ease;
+      }
+      .balloon {
+        position: absolute;
+        bottom: -150px;
+        width: 60px;
+        height: 75px;
+        border-radius: 50%;
+        animation: fly 10s linear infinite;
+        opacity: 0.85;
+      }
+      .b1 {
+        left: 8%;
+        background: #ff4081;
+        animation-delay: 0s;
+      }
+      .b2 {
+        left: 25%;
+        background: #00e5ff;
+        animation-delay: 2s;
+      }
+      .b3 {
+        left: 48%;
+        background: #ffd740;
+        animation-delay: 4s;
+      }
+      .b4 {
+        left: 70%;
+        background: #69f0ae;
+        animation-delay: 1s;
+      }
+      .b5 {
+        left: 88%;
+        background: #b388ff;
+        animation-delay: 3s;
+      }
+      .heart {
+        position: absolute;
+        color: #ff4081;
+        font-size: 25px;
+        animation: hearts 7s linear infinite;
+      }
+      .h1 {
+        left: 15%;
+        animation-delay: 1s;
+      }
+      .h2 {
+        left: 40%;
+        animation-delay: 3s;
+      }
+      .h3 {
+        left: 65%;
+        animation-delay: 2s;
+      }
+      .h4 {
+        left: 85%;
+        animation-delay: 4s;
+      }
+      @keyframes glow {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.05);
+        }
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+      @keyframes fly {
+        0% {
+          bottom: -150px;
+          transform: translateX(0) rotate(0);
+        }
+        100% {
+          bottom: 120%;
+          transform: translateX(100px) rotate(20deg);
+        }
+      }
+      @keyframes hearts {
+        0% {
+          bottom: -50px;
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        }
+        100% {
+          bottom: 110%;
+          opacity: 0;
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 38px;
+        }
+        .name {
+          font-size: 28px;
+        }
+        .cake {
+          font-size: 75px;
+        }
+        #message {
+          padding: 15px;
+          font-size: 17px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Balloons -->
+    <div class="balloon b1"></div>
+    <div class="balloon b2"></div>
+    <div class="balloon b3"></div>
+    <div class="balloon b4"></div>
+    <div class="balloon b5"></div>
+    <!-- Hearts -->
+    <div class="heart h1">❤️</div>
+    <div class="heart h2">💖</div>
+    <div class="heart h3">💕</div>
+    <div class="heart h4">❤️</div>
+    <div class="container">
+      <h1>❤️ HAPPY BIRTHDAY❤️ </h1>
+      <div class="name">A litte gift from IRRU to Yasir kundi ❤️</div>
+      <div class="cake">🎂</div>
+      <div class="gift" onclick="openGift()"></div>
+      <button class="button" onclick="openGift()">🎁 Open Your Gift</button>
+      <div id="message" style="display: block;">
+        <img src="./gift_files/yasar.jpg.jpeg" height="200px" width="200px">
+        <img src="./gift_files/yasr.jpeg" alt="" height="200px" width="200px">
+
+Happy Birthday To ❤️ Yasir Kundi 👑
+On your special day, I just want you to know that you're someone really special.
+You make my days brighter, my talks better and my life a little more beautiful.
+May this new year of your life bring you happiness, success and everything you wish for.
+Keep smiling, because your smile is honestly one of the best things ever.
+Happy Birthday, Yasir Kundi!
+May all your dreams come true...
+and may you always be this amazing. ❤️<br>
+To: Yasir Kundi <br>
+From: irru ✨🫶
+
+      </div>
+    </div>
+    <script>
+      function openGift() {
+        document.getElementById("message").style.display = "block";
+        // Birthday celebration
+        for (let i = 0; i < 40; i++) {
+          let confetti = document.createElement("div");
+          confetti.innerHTML = "❤️";
+          confetti.style.position = "fixed";
+          confetti.style.left = Math.random() * 100 + "vw";
+          confetti.style.top = "-30px";
+          confetti.style.fontSize = Math.random() * 20 + 15 + "px";
+          confetti.style.zIndex = "10";
+          document.body.appendChild(confetti);
+          let duration = Math.random() * 3 + 2;
+          confetti.animate(
+            [
+              { transform: "translateY(0) rotate(0deg)" },
+              { transform: `translateY(110vh) rotate(720deg)` },
+            ],
+            {
+              duration: duration * 1000,
+              easing: "linear",
+            },
+          );
+          setTimeout(() => {
+            confetti.remove();
+          }, duration * 1000);
+        }
+      }
+    </script>
+  
+
+</body></html>
